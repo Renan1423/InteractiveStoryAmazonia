@@ -46,6 +46,17 @@ body {
     background: linear-gradient(to bottom, #9df0ff, #87eb9d);
 }
 
+.intro-text {
+    font-size: 1.5rem;
+    color: #222;
+    max-width: 800px;
+    margin: -40px auto 50px auto; /* Compensa a margem do h1 e cria espaço antes do botão */
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    font-weight: 500;
+}
+
 #particle-canvas {
     position: absolute;
     top: 0; left: 0;
@@ -202,6 +213,12 @@ body {
     .title-content h1 {
         font-size: 2.8rem;
         margin-bottom: 40px;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+        padding: 0 20px;
+        margin: -20px auto 30px auto;
     }
     
     #dialogue-box {
