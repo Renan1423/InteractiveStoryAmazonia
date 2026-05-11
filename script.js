@@ -41,6 +41,12 @@ function initParticles() {
     animateParticles();
 }
 
+// Ensure particles adapt when resizing window or rotating a device
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';

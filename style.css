@@ -43,7 +43,7 @@ body {
 
 /* --- Title Screen --- */
 #title-screen {
-    background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+    background: linear-gradient(to bottom, #9df0ff, #87eb9d);
 }
 
 #particle-canvas {
@@ -85,21 +85,19 @@ body {
 #dialogue-box {
     position: absolute;
     top: 50%; /* Centered by default */
-    transform: translateY(-50%); /* Adjusts for perfect vertical centering */
+    transform: translateY(-50%); 
     width: 70%;
-    height: auto; /* Flexible height based on text */
-    min-height: 120px; /* Keeps it from shrinking too much on short texts */
+    height: auto; 
+    min-height: 120px; 
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     color: #fff;
     font-size: 2rem;
     font-style: italic;
-    /* Added top and transform to the transition so it animates smoothly */
     transition: top 0.6s ease, transform 0.6s ease, opacity 0.5s ease;
     cursor: pointer; 
 }
 
-/* New class to push the dialogue box to the top when choices are present */
 #dialogue-box.at-top {
     top: 7.75%;
     transform: translateY(0);
@@ -109,7 +107,7 @@ body {
 #choices-container {
     display: flex;
     gap: 80px;
-    margin-top: 100px; 
+    margin-top: 220px; 
     transition: opacity 0.5s ease;
     z-index: 11;
 }
@@ -170,4 +168,78 @@ body {
     transition: opacity 0.3s ease;
     height: 40px; 
     margin-top: 80px;
+}
+
+
+/* =========================================
+   RESPONSIVENESS (MEDIA QUERIES)
+   ========================================= */
+
+/* Ultrawide Displays (min-width: 2560px) */
+@media (min-width: 2560px) {
+    .title-content h1 { font-size: 6rem; }
+    #start-btn { font-size: 2rem; padding: 20px 50px; }
+    
+    #dialogue-box { 
+        width: 50%; /* Prevent line lengths from getting unreadable */
+        font-size: 2.5rem; 
+    }
+    
+    .choice-btn { width: 350px; height: 100px; font-size: 1.5rem; }
+    .choice-btn:hover { height: 250px; }
+    #choice-description { font-size: 2.2rem; }
+}
+
+/* Tablets and small laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #choices-container { gap: 30px; }
+    .choice-btn { width: 220px; }
+    #dialogue-box { font-size: 1.5rem; width: 85%; }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .title-content h1 {
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+    }
+    
+    #dialogue-box {
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 15px;
+        min-height: 80px;
+    }
+    
+    #dialogue-box.at-top {
+        top: 3%; /* Push higher on mobile to save vertical space */
+    }
+
+    #choices-container {
+        flex-direction: column; /* Stack choices vertically */
+        gap: 15px;
+        margin-top: 40px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .choice-btn {
+        width: 85%;
+        max-width: 320px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .choice-btn:hover {
+        height: 100px; /* Don't expand too much on small screens */
+        transform: scale(1.02); /* Subtle scale to avoid horizontal overflow */
+    }
+
+    #choice-description {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        padding: 0 15px;
+        height: auto;
+        min-height: 40px;
+    }
 }

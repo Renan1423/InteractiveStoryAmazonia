@@ -128,7 +128,7 @@
     ]
   },
   "end": {
-    "text": "Thanks for playing.",
+    "text": "Em desenvolvimento... Obrigado por jogar!",
     "bg": "none"
   }
 }
