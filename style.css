@@ -50,6 +50,7 @@ body {
     font-size: 1.5rem;
     color: #222;
     max-width: 800px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: -40px auto 50px auto; /* Compensa a margem do h1 e cria espaço antes do botão */
     line-height: 1.6;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
@@ -219,6 +220,7 @@ body {
         font-size: 1.1rem;
         padding: 0 20px;
         margin: -20px auto 30px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
     #dialogue-box {
