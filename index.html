@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dynamic Background Layer -->
+    <div id="game-background"></div>
+
+    <!-- Title Screen -->
+    <div id="title-screen" class="screen">
+        <canvas id="particle-canvas"></canvas>
+        <div class="title-content">
+            <h1>Amazônia</h1>
+            <button id="start-btn">Iniciar</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        
+        <!-- Dialogue Box (Moved to top) -->
+        <div id="dialogue-box" class="hidden">
+            <p id="dialogue-text"></p>
+        </div>
+
+        <!-- Choices Area -->
+        <div id="choices-container" class="hidden"></div>
+
+        <!-- Choice Description Hover Box (Moved under choices) -->
+        <div id="choice-description" class="hidden"></div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

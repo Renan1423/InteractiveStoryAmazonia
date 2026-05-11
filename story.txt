@@ -1,0 +1,134 @@
+{
+  "start": {
+    "text": "Sinta a brisa, ouça as vozes da floresta, e prepare-se para ver o mundo por novos olhos. Nesse ecossistema, cada escolha carrega o peso da sobrevivência e a responsabilidade de um mundo inteiro. O que você pode fazer para enfrentar o que está por vir?",
+    "bg": "images/Sky.png",
+    "next": "node2"
+  },
+  "node2": {
+    "text": "O ar é úmido e carrega o perfume da terra molhada. Você sente o calor do sol filtrado pelas folhas, iluminando seu rosto. O frescor da brisa te enche de segurança e conforto, você pertence aqui. A natureza não é um cenário, é sua primeira casa, seu lar. Mas essa harmonia é frágil, e você ouve um estalo seco ao longe, e seus sentidos te dizem que o tempo está mudando... Escolha como enfrentar:",
+    "bg": "images/Forest.jpg",
+    "choices": [
+      {
+        "text": "Onça-Pintada, a força e o território",
+        "image": "images/OncaPintada.jpg",
+        "description": "Sua presença é imponente e seu corpo é o guardião do chão. Você sente a terra tremer e está pronto para proteger cada palmo deste reino.",
+        "tempDialogue": "Onça-Pintada é a sua escolha.",
+        "returnNode": "node3_O"
+      },
+      {
+        "text": "Arara-Azul, a visão e a liberdade",
+        "image": "images/AraraAzul.jpg",
+        "description": "Seu olhar alcança o infinito e suas asas dominam o céu. Você é a voz que alerta e a cor que embeleza a imensidão.",
+        "tempDialogue": "Arara-Azul é a sua escolha.",
+        "returnNode": "node3_A"
+      },
+      {
+        "text": "Macaco-Aranha, a agilidade e inteligência",
+        "image": "images/MacacoAranha.jpg",
+        "description": "Sua casa são as árvores e sua força está na união. Você se move onde ninguém mais alcança, sustentando a vida no topo do mundo.",
+        "tempDialogue": "Macaco-Aranha é a sua escolha",
+        "returnNode": "node3_M"
+      }
+    ]
+  },
+  "node3_O": {
+    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você corre, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_O"
+  },
+  "node3_A": {
+    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você voa, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_A"
+  },
+  "node3_M": {
+    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você salta, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_M"
+  },
+  "node4_O": {
+    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem. Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
+    "bg": "images/BurningForest.jpg",
+    "choices": [
+      {
+        "text": "Buscar água e lutar contra o fogo",
+        "image": "images/Water.jpg",
+        "description": "",
+        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico. A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você. Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo. Por que você fez isso? Esse fogo é grande demais para você.",
+        "returnNode": "end"
+      },
+      {
+        "text": "Avisar e guiar os outros",
+        "image": "images/Guide.jpg",
+        "description": "",
+        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram. Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar. Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram. Por que você fez isso? Você sabe que não pode salvar todos.",
+        "returnNode": "end"
+      },
+      {
+        "text": "Continuar a fuga",
+        "image": "images/Run.jpg",
+        "description": "",
+        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer. Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver. Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo. Por que você fez isso? É uma pena ter escolhido deixar os outros.",
+        "returnNode": "end"
+      }
+    ]
+  },
+  "node4_A": {
+    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem. Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
+    "bg": "images/BurningForest.jpg",
+    "choices": [
+      {
+        "text": "Buscar água e lutar contra o fogo",
+        "image": "images/Water.jpg",
+        "description": "",
+        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico. A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você. Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo. Por que você fez isso? Esse fogo é grande demais para você.",
+        "returnNode": "end"
+      },
+      {
+        "text": "Avisar e guiar os outros",
+        "image": "images/Guide.jpg",
+        "description": "",
+        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram. Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar. Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram. Por que você fez isso? Você sabe que não pode salvar todos.",
+        "returnNode": "end"
+      },
+      {
+        "text": "Continuar a fuga",
+        "image": "images/Run.jpg",
+        "description": "",
+        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer. Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver. Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo. Por que você fez isso? É uma pena ter escolhido deixar os outros.",
+        "returnNode": "end"
+      }
+    ]
+  },
+  "node4_M": {
+    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem. Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
+    "bg": "images/BurningForest.jpg",
+    "choices": [
+      {
+        "text": "Buscar água e lutar contra o fogo",
+        "image": "images/Water.jpg",
+        "description": "",
+        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico. A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você. Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo. Por que você fez isso? Esse fogo é grande demais para você.",
+        "returnNode": "end"
+      },
+      {
+        "text": "Avisar e guiar os outros",
+        "image": "images/Guide.jpg",
+        "description": "",
+        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram. Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar. Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram. Por que você fez isso? Você sabe que não pode salvar todos.",
+        "returnNode": "end"
+      },
+      {
+        "text": "Continuar a fuga",
+        "image": "images/Run.jpg",
+        "description": "",
+        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer. Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver. Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo. Por que você fez isso? É uma pena ter escolhido deixar os outros.",
+        "returnNode": "end"
+      }
+    ]
+  },
+  "end": {
+    "text": "Thanks for playing.",
+    "bg": "none"
+  }
+}
