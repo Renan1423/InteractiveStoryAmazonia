@@ -7,6 +7,7 @@ let currentWords = [];
 let wordIndex = 0;
 let isWaitingForChoice = false;
 let pendingReturnNode = null; 
+let fadeInterval = null; // Variable to control the audio fade
 
 // --- DOM Elements ---
 const bgLayer = document.getElementById('game-background');
@@ -16,6 +17,7 @@ const dialogueBox = document.getElementById('dialogue-box');
 const dialogueText = document.getElementById('dialogue-text');
 const choicesContainer = document.getElementById('choices-container');
 const descriptionBox = document.getElementById('choice-description');
+const bgMusic = document.getElementById('bg-music');
 
 // --- Initialization ---
 document.getElementById('start-btn').addEventListener('click', startGame);
@@ -95,6 +97,13 @@ function loadNode(nodeKey) {
         bgLayer.style.backgroundImage = "none";
     }
 
+    // Handle Background Music with Fade Effect and Custom Volume
+    if (currentNode.music) {
+        // Defaults to 1 (100%) if volume is not defined in the JSON
+        const targetVolume = currentNode.volume !== undefined ? currentNode.volume : 1.0;
+        changeMusic(currentNode.music, targetVolume);
+    }
+
     // Move dialogue box to the top if choices are present
     if (currentNode.choices && currentNode.choices.length > 0) {
         dialogueBox.classList.add('at-top');
@@ -110,6 +119,66 @@ function loadNode(nodeKey) {
     
     startTyping(currentNode.text, 100); 
 }
+
+// --- Audio Fade Logic ---
+
+function changeMusic(newSrc, targetVolume) {
+    // If the new track is already playing, just verify/update its volume
+    if (bgMusic.getAttribute('src') === newSrc) {
+        if (bgMusic.volume !== targetVolume) {
+            bgMusic.volume = targetVolume;
+        }
+        return;
+    }
+
+    // If no music is currently playing (first track loaded)
+    if (!bgMusic.getAttribute('src')) {
+        bgMusic.volume = 0;
+        bgMusic.src = newSrc;
+        bgMusic.play().catch(e => console.error("Audio playback failed:", e));
+        fadeInAudio(targetVolume);
+        return;
+    }
+
+    // If music is already playing, fade it out, swap track, and fade back in
+    fadeOutAudio(() => {
+        bgMusic.src = newSrc;
+        bgMusic.play().catch(e => console.error("Audio playback failed:", e));
+        fadeInAudio(targetVolume);
+    });
+}
+
+function fadeOutAudio(callback) {
+    clearInterval(fadeInterval);
+    let vol = bgMusic.volume;
+    fadeInterval = setInterval(() => {
+        vol -= 0.05; // Decrease volume
+        if (vol <= 0) {
+            bgMusic.volume = 0;
+            clearInterval(fadeInterval);
+            if (callback) callback();
+        } else {
+            bgMusic.volume = vol;
+        }
+    }, 50); 
+}
+
+function fadeInAudio(targetVolume) {
+    clearInterval(fadeInterval);
+    let vol = 0;
+    bgMusic.volume = vol;
+    fadeInterval = setInterval(() => {
+        vol += 0.05; // Increase volume
+        if (vol >= targetVolume) {
+            bgMusic.volume = targetVolume;
+            clearInterval(fadeInterval);
+        } else {
+            bgMusic.volume = vol;
+        }
+    }, 50); 
+}
+
+// --- Typing Logic ---
 
 function startTyping(text, speed) {
     clearInterval(typeInterval);
@@ -140,6 +209,8 @@ function finishTyping() {
         showChoices(currentNode.choices);
     }
 }
+
+// --- Interactions ---
 
 function handleScreenClick(e) {
     // Ignore clicks on choice buttons to prevent doubling up events

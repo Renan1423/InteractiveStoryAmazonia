@@ -2,6 +2,8 @@
   "start": {
     "text": "Sinta a brisa, ouça as vozes da floresta, e prepare-se para ver o mundo por novos olhos. Nesse ecossistema, cada escolha carrega o peso da sobrevivência e a responsabilidade de um mundo inteiro. O que você pode fazer para enfrentar o que está por vir?",
     "bg": "images/Sky.png",
+    "music": "musics/SonsDaAmazôniaIntro.mp3",
+    "volume": 0.8,
     "next": "node2"
   },
   "node2": {
@@ -34,16 +36,22 @@
   "node3_O": {
     "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você corre, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
     "bg": "images/BurningForest.jpg",
+    "music": "musics/BaianaFogo.mp3",
+    "volume": 0.45,
     "next": "node4_O"
   },
   "node3_A": {
     "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você voa, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
     "bg": "images/BurningForest.jpg",
+    "music": "musics/BaianaFogo.mp3",
+    "volume": 0.45,
     "next": "node4_A"
   },
   "node3_M": {
     "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você salta, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
     "bg": "images/BurningForest.jpg",
+    "music": "musics/BaianaFogo.mp3",
+    "volume": 0.45,
     "next": "node4_M"
   },
   "node4_O": {
@@ -54,22 +62,22 @@
         "text": "Buscar água e lutar contra o fogo",
         "image": "images/Water.jpg",
         "description": "",
-        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico. A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você. Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo. Por que você fez isso? Esse fogo é grande demais para você.",
-        "returnNode": "node5_O"
+        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico.",
+        "returnNode": "node5_O_water_1"
       },
       {
         "text": "Avisar e guiar os outros",
         "image": "images/Guide.jpg",
         "description": "",
-        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram. Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar. Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram. Por que você fez isso? Você sabe que não pode salvar todos.",
-        "returnNode": "node5_O"
+        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram.",
+        "returnNode": "node5_O_guide_1"
       },
       {
         "text": "Continuar a fuga",
         "image": "images/Run.jpg",
         "description": "",
-        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer. Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver. Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo. Por que você fez isso? É uma pena ter escolhido deixar os outros.",
-        "returnNode": "node5_O"
+        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer.",
+        "returnNode": "node5_O_run_1"
       }
     ]
   },
@@ -81,22 +89,22 @@
         "text": "Buscar água e lutar contra o fogo",
         "image": "images/Water.jpg",
         "description": "",
-        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico. A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você. Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo. Por que você fez isso? Esse fogo é grande demais para você.",
-        "returnNode": "node5_A"
+        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico.",
+        "returnNode": "node5_A_water_1"
       },
       {
         "text": "Avisar e guiar os outros",
         "image": "images/Guide.jpg",
         "description": "",
-        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram. Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar. Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram. Por que você fez isso? Você sabe que não pode salvar todos.",
-        "returnNode": "node5_A"
+        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram.",
+        "returnNode": "node5_A_guide_1"
       },
       {
         "text": "Continuar a fuga",
         "image": "images/Run.jpg",
         "description": "",
-        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer. Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver. Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo. Por que você fez isso? É uma pena ter escolhido deixar os outros.",
-        "returnNode": "node5_A"
+        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer.",
+        "returnNode": "node5_A_run_1"
       }
     ]
   },
@@ -108,121 +116,318 @@
         "text": "Buscar água e lutar contra o fogo",
         "image": "images/Water.jpg",
         "description": "",
-        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico. A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você. Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo. Por que você fez isso? Esse fogo é grande demais para você.",
-        "returnNode": "node5_M"
+        "tempDialogue": "Talvez, se você conseguir molhar aquele trecho, as chamas possam desviar, talvez você possa ganhar tempo para os outros animais. Você pega o filhote e se apressa até o rio, buscando carregar o máximo de água possível em sua boca/bico.",
+        "returnNode": "node5_M_water_1"
       },
       {
         "text": "Avisar e guiar os outros",
         "image": "images/Guide.jpg",
         "description": "",
-        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram. Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar. Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram. Por que você fez isso? Você sabe que não pode salvar todos.",
-        "returnNode": "node5_M"
+        "tempDialogue": "Ver o filhote te fez imaginar quantos outros podem estar perdidos. Talvez você não possa salvar a floresta, mas você pode salvar as vozes dela. Vocês todos precisam sair juntos dali. Você pega o filhote e se apressa entre as árvores, buscando ajudar aqueles que sobraram.",
+        "returnNode": "node5_M_guide_1"
       },
       {
         "text": "Continuar a fuga",
         "image": "images/Run.jpg",
         "description": "",
-        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer. Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver. Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo. Por que você fez isso? É uma pena ter escolhido deixar os outros.",
-        "returnNode": "node5_M"
+        "tempDialogue": "A esse ponto, não é mais possível salvar a floresta. Você não tem muita opção, qualquer tentativa de ficar pode acabar matando vocês dois. Você leva o filhote, correndo pelas árvores/voando rapidamente/saltando pelos galhos, e não olha pra trás por um instante sequer.",
+        "returnNode": "node5_M_run_1"
       }
     ]
   },
-  "node5_O": {
-    "text": "Você emerge da fumaça em passos assustados até suas patas queimadas pisarem em algo duro e frio. O filhote em suas presas treme, confuso com a selva de pedra. Dois sóis gigantes cegam sua visão repentinamente, e um ruído metálico e alto corta o ar. Pessoas gritam ao longe, tão assustadas quanto você. Você rosna, mas não há quem morder. Você não é um refugiado, você é uma ameaça. Para onde você vai?",
+  "node5_O_water_1": {
+    "text": "A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_O_water_2"
+  },
+  "node5_O_water_2": {
+    "text": "Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_O_water_3"
+  },
+  "node5_O_water_3": {
+    "text": "Por que você fez isso? Esse fogo é grande demais para você.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_O_city_1"
+  },
+  "node5_O_guide_1": {
+    "text": "Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_O_guide_2"
+  },
+  "node5_O_guide_2": {
+    "text": "Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_O_guide_3"
+  },
+  "node5_O_guide_3": {
+    "text": "Por que você fez isso? Você sabe que não pode salvar todos.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_O_city_1"
+  },
+  "node5_O_run_1": {
+    "text": "Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_O_run_2"
+  },
+  "node5_O_run_2": {
+    "text": "Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_O_run_3"
+  },
+  "node5_O_run_3": {
+    "text": "Por que você fez isso? É uma pena ter escolhido deixar os outros.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_O_city_1"
+  },
+  "node5_A_water_1": {
+    "text": "A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_A_water_2"
+  },
+  "node5_A_water_2": {
+    "text": "Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_A_water_3"
+  },
+  "node5_A_water_3": {
+    "text": "Por que você fez isso? Esse fogo é grande demais para você.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_A_city_1"
+  },
+  "node5_A_guide_1": {
+    "text": "Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_A_guide_2"
+  },
+  "node5_A_guide_2": {
+    "text": "Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_A_guide_3"
+  },
+  "node5_A_guide_3": {
+    "text": "Por que você fez isso? Você sabe que não pode salvar todos.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_A_city_1"
+  },
+  "node5_A_run_1": {
+    "text": "Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_A_run_2"
+  },
+  "node5_A_run_2": {
+    "text": "Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_A_run_3"
+  },
+  "node5_A_run_3": {
+    "text": "Por que você fez isso? É uma pena ter escolhido deixar os outros.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_A_city_1"
+  },
+  "node5_M_water_1": {
+    "text": "A fumaça entra nos seus pulmões enquanto você dá tudo de si para jogar um pouco de água, mesmo exausto. Você protege o filhote com o seu corpo, sentindo o calor aumentar, e sabe que ele está respirando tão mal quanto você.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_M_water_2"
+  },
+  "node5_M_water_2": {
+    "text": "Você escapa por pouco, com o filhote assustado com seus pelos/penas chamuscadas pelo fogo.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_M_water_3"
+  },
+  "node5_M_water_3": {
+    "text": "Por que você fez isso? Esse fogo é grande demais para você.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_M_city_1"
+  },
+  "node5_M_guide_1": {
+    "text": "Você corre/voa, grita, chama a todos, mas sua voz falha cada vez mais. O filhote se agarra ao seu corpo enquanto você tenta organizar o caos. Muitos seguem as suas direções, mas outros ficam para trás, exaustos demais para continuar.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_M_guide_2"
+  },
+  "node5_M_guide_2": {
+    "text": "Você lidera um pequeno grupo, mas sempre terá que se lembrar do silêncio dos que não vieram.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_M_guide_3"
+  },
+  "node5_M_guide_3": {
+    "text": "Por que você fez isso? Você sabe que não pode salvar todos.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_M_city_1"
+  },
+  "node5_M_run_1": {
+    "text": "Sua pressa deixa seu corpo cada vez mais cansado, ainda mais com o peso do filhote. O ar cinzento não te deixa respirar direito e atrapalha sua visão, mas você segue seu instinto em meio a dor, vocês precisam sobreviver.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_M_run_2"
+  },
+  "node5_M_run_2": {
+    "text": "Você chega até a borda da mata antes de todos os outros, mas as chamas continuam devorando tudo.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node5_M_run_3"
+  },
+  "node5_M_run_3": {
+    "text": "Por que você fez isso? É uma pena ter escolhido deixar os outros.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node6_M_city_1"
+  },
+  "node6_O_city_1": {
+    "text": "Você emerge da fumaça em passos assustados até suas patas queimadas pisarem em algo duro e frio. O filhote em suas presas treme, confuso com a selva de pedra. Dois sóis gigantes cegam sua visão repentinamente, e um ruído metálico e alto corta o ar. Pessoas gritam ao longe, tão assustadas quanto você.",
+    "bg": "images/City.jpg",
+    "music": "musics/RuidoCinzaTransito.mp3",
+    "volume": 0.5,
+    "next": "node6_O_city_2"
+  },
+  "node6_O_city_2": {
+    "text": "Você rosna, mas não há quem morder. Você não é um refugiado, você é uma ameaça.",
+    "bg": "images/City.jpg",
+    "next": "node6_O_city_3"
+  },
+  "node6_O_city_3": {
+    "text": "Para onde você vai?",
     "bg": "images/City.jpg",
     "choices": [
       {
         "text": "Um lugar mais escuro",
-        "image": "images/DarkPlace.jpg",
+        "image": "images/DarkPlace.jpeg",
         "description": "",
         "tempDialogue": "Você encontra uma entrada para um lugar fechado e escuro. O chão não é de terra, é um pó cinza que gruda das suas patas com um cheiro amargo que faz seu nariz arder. Você deita o filhote sobre umas poças coloridas que brilham, mas têm um gosto terrível. Sua cabeça gira e o ar está pesado, como se a fumaça da floresta tivesse te seguido para essa caverna de metal. O filhote adormece, exausto, mas você não consegue descansar. Seus músculos latejam, sua pele arde, e cada som parece um novo ataque.",
-        "returnNode": "node6_O"
+        "returnNode": "node7_O_sleep_1"
       },
       {
         "text": "Um lugar com sombra",
-        "image": "images/DarkPlace.jpg",
+        "image": "images/ShadowPlace.jpeg",
         "description": "",
         "tempDialogue": "Você encontra uma árvore solitária atrás de uma cerca de espinhos de ferro. O filhote se encolhe entre suas patas enquanto ouve rugidos finos e constantes vindos de trás de uma porta. São animais como você, mas furiosos e assustados. O perigo que antes tinha cheiro de fogo, agora tem cheiro de bicho doente. O filhote adormece, exausto, mas você não consegue descansar. Seus músculos latejam, sua pele arde, e cada som parece um novo ataque.",
-        "returnNode": "node6_O"
+        "returnNode": "node7_O_sleep_1"
       }
     ]
   },
-  "node5_A": {
-    "text": "Você bate as asas tentando ganhar altura, mas mesmo distante do fogo o ar ainda é pesado e sujo. Você voa entre paredões cinzas que refletem sua imagem de forma confusa. Paredes invisíveis bloqueiam seu caminho sempre que você tenta se abrigar. O filhote está perdendo as forças em seu bico, e o chão lá embaixo é uma corrente de metal barulhento. Para onde você vai?",
+  "node6_A_city_1": {
+    "text": "Você bate as asas tentando ganhar altura, mas mesmo distante do fogo o ar ainda é pesado e sujo. Você voa entre paredões cinzas que refletem sua imagem de forma confusa. Paredes invisíveis bloqueiam seu caminho sempre que você tenta se abrigar. O filhote está perdendo as forças em seu bico, e o chão lá embaixo é uma corrente de metal barulhento.",
+    "bg": "images/City.jpg",
+    "music": "musics/RuidoCinzaTransito.mp3",
+    "volume": 0.5,
+    "next": "node6_A_city_2"
+  },
+  "node6_A_city_2": {
+    "text": "Para onde você vai?",
     "bg": "images/City.jpg",
     "choices": [
       {
         "text": "Um lugar aquecido",
-        "image": "images/WarmPlace.jpg",
+        "image": "images/WarmPlace.jpeg",
         "description": "",
         "tempDialogue": "Suas asas batem contra um teto branco e quente. Você encontrou um buraco onde sopra um vento constante e seco, com um cheiro nauseante. O filhote tosse um pó branco que cobre suas penas. Abaixo de vocês, é possível ouvir gemidos e bipes metálicos. É um ninho de humanos doentes, e o ar que eles respiram se prende às suas penas, pesado e invisível. O filhote adormece, exausto, mas você não consegue descansar. Seus músculos latejam, sua pele arde, e cada som parece um novo ataque.",
-        "returnNode": "node6_A"
+        "returnNode": "node7_A_sleep_1"
       },
       {
         "text": "Um lugar mais alto",
-        "image": "images/WarmPlace.jpg",
+        "image": "images/HighPlace.jpeg",
         "description": "",
-        "tempDialogue": "Você pousa no galho de metal mais alto que encontra. Ele vibra contra seus pés, um formigamento que sobe por suas pernas e deixa as penas do filhote eriçadas. Não há folhas para se esconder, apenas o céu cinza e um zumbido incessante dentro da sua cabeça. Você sente seu corpo estranho, como se o sol estivesse queimando debaixo da sua pele, mesmo na escuridão.",
-        "returnNode": "node6_A"
+        "tempDialogue": "Você pousa no galho de metal mais alto que encontra. Ele vibra contra seus pés, um formigamento que sube por suas pernas e deixa as penas do filhote eriçadas. Não há folhas para se esconder, apenas o céu cinza e um zumbido incessante dentro da sua cabeça. Você sente seu corpo estranho, como se o sol estivesse queimando debaixo da sua pele, mesmo na escuridão.",
+        "returnNode": "node7_A_sleep_1"
       }
     ]
   },
-  "node5_M": {
-    "text": "Você busca as árvores, mas elas não têm galhos, são cinzentas e retas. O filhote abraça seu pescoço enquanto você pula em um cipó preto e rígido que estala sob suas mãos. Um cheiro queimado se mistura ao da sua própria pelagem chamuscada. Abaixo de você, humanos apontam caixas pretas na direção do seu desespero. Para onde você vai?",
+  "node6_M_city_1": {
+    "text": "Você busca as árvores, mas elas não têm galhos, são cinzentas e retas. O filhote abraça seu pescoço enquanto você pula em um cipó preto e rígido que estala sob suas mãos. Um cheiro queimado se mistura ao da sua própria pelagem chamuscada. Abaixo de você, humanos apontam caixas pretas na direção do seu desespero.",
+    "bg": "images/City.jpg",
+    "music": "musics/RuidoCinzaTransito.mp3",
+    "volume": 0.5,
+    "next": "node6_M_city_2"
+  },
+  "node6_M_city_2": {
+    "text": "Para onde você vai?",
     "bg": "images/City.jpg",
     "choices": [
       {
         "text": "Um lugar com comida",
-        "image": "images/DarkPlace.jpg",
+        "image": "images/FoodPlace.jpeg",
         "description": "",
         "tempDialogue": "Seu bando não está com você, mas você encontrou caixas cheias de cascas que brilham e cheiram a algo doce e estragado. O filhote come rápido, desesperado, e você também busca o que sobrou. Mas sua barriga já reclama, um nó que aperta e queima. Suas mãos estão pegajosas por um caldo escuro e o cheiro de podridão te lembra que esse alimento não veio da terra, mas do lixo de quem expulsou vocês.",
-        "returnNode": "node6_M"
+        "returnNode": "node7_M_sleep_1"
       },
       {
         "text": "Um lugar com árvores",
-        "image": "images/WarmPlace.jpg",
+        "image": "images/TreePlace.jpeg",
         "description": "",
         "tempDialogue": "As árvores aqui são pequenas, com formato talvez perfeito até demais. O chão tem uma grama com cheiro de remédio, sem nenhum inseto. O filhote tenta beber a água que sai de um cano, mas ela tem um gosto estranho, pinica a língua. Você olha para os lados, vendo olhos de vidro te seguindo. Você se encontra em uma gaiola sem grades, onde o verde é apenas uma mentira pintada para simular uma paisagem agradável.",
-        "returnNode": "node6_M"
+        "returnNode": "node7_M_sleep_1"
       }
     ]
   },
-  "node6_O": {
-    "text": "Você fecha os olhos exausto, entrando num sono inquieto, e a última coisa que vê não é a floresta que perdeu, mas o reflexo de um mundo que não tem lugar para você. Você sente o pequeno coração do filhote batendo contra o seu. O risco é invisível, o cansaço é absoluto. Mas, enquanto a escuridão da cidade parece eterna, uma luz nova começa a tocar o topo dos prédios. Não é o laranja do fogo. É um tom de mel, suave e antigo. Você abre os olhos e o céu não está mais sujo. O som de buzinas desaparece, dando lugar a um silêncio reverente, seguido pelo primeiro canto de um pássaro ao longe.",
+  "node7_O_sleep_1": {
+    "text": "Você fecha os olhos exausto, entrando num sono inquieto, e a última coisa que vê não é a floresta que perdeu, mas o reflexo de um mundo que não tem lugar para você. Você sente o pequeno coração do filhote batendo contra o seu. O risco é invisível, o cansaço é absoluto.",
     "bg": "images/CityDawn.jpg",
-    "next": "node7_O"
+    "next": "node7_O_sleep_2"
   },
-  "node6_A": {
-    "text": "Você fecha os olhos exausto, entrando num sono inquieto, e a última coisa que vê não é a floresta que perdeu, mas o reflexo de um mundo que não tem lugar para você. Você sente o pequeno coração do filhote batendo contra o seu. O risco é invisível, o cansaço é absoluto. Mas, enquanto a escuridão da cidade parece eterna, uma luz nova começa a tocar o topo dos prédios. Não é o laranja do fogo. É um tom de mel, suave e antigo. Você abre os olhos e o céu não está mais sujo. O som de buzinas desaparece, dando lugar a um silêncio reverente, seguido pelo primeiro canto de um pássaro ao longe.",
+  "node7_O_sleep_2": {
+    "text": "Mas, enquanto a escuridão da cidade parece eterna, uma luz nova começa a tocar o topo dos prédios. Não é o laranja do fogo. É um tom de mel, suave e antigo. Você abre os olhos e o céu não está mais sujo. O som de buzinas desaparece, dando lugar a um silêncio reverente, seguido pelo primeiro canto de um pássaro ao longe.",
     "bg": "images/CityDawn.jpg",
-    "next": "node7_A"
+    "next": "node8_O_hope_1"
   },
-  "node6_M": {
-    "text": "Você fecha os olhos exausto, entrando num sono inquieto, e a última coisa que vê não é a floresta que perdeu, mas o reflexo de um mundo que não tem lugar para você. Você sente o pequeno coração do filhote batendo contra o seu. O risco é invisível, o cansaço é absoluto. Mas, enquanto a escuridão da cidade parece eterna, uma luz nova começa a tocar o topo dos prédios. Não é o laranja do fogo. É um tom de mel, suave e antigo. Você abre os olhos e o céu não está mais sujo. O som de buzinas desaparece, dando lugar a um silêncio reverente, seguido pelo primeiro canto de um pássaro ao longe.",
+  "node7_A_sleep_1": {
+    "text": "Você fecha os olhos exausto, entrando num sono inquieto, e a última coisa que vê não é a floresta que perdeu, mas o reflexo de um mundo que não tem lugar para você. Você sente o pequeno coração do filhote batendo contra o seu. O risco é invisível, o cansaço é absoluto.",
     "bg": "images/CityDawn.jpg",
-    "next": "node7_M"
+    "next": "node7_A_sleep_2"
   },
-  "node7_O": {
-    "text": "Você se levanta. O corpo dói, mas o ar está mais leve. Ao olhar para o lugar onde repousou, percebe que o filhote brinca com algo que se soltou da sua pelagem durante a fuga: uma vagem de Jatobá, intacta e forte. Você a carregou entre os pelos enquanto lutava contra o fogo. O filhote a empurra para um pequeno pedaço de terra entre o asfalto. Suas pegadas agora não são de fuga, mas de marcação de um novo território. Enquanto houver quem carregue a semente, a floresta nunca estará morta.",
+  "node7_A_sleep_2": {
+    "text": "Mas, enquanto a escuridão da cidade parece eterna, uma luz nova começa a tocar o topo dos prédios. Não é o laranja do fogo. É um tom de mel, suave e antigo. Você abre os olhos e o céu não está mais sujo. O som de buzinas desaparece, dando lugar a um silêncio reverente, seguido pelo primeiro canto de um pássaro ao longe.",
     "bg": "images/CityDawn.jpg",
-    "next": "node8"
+    "next": "node8_A_hope_1"
   },
-  "node7_A": {
-    "text": "O sol toca suas penas azuis e você percebe que, apesar da fumaça, sua cor ainda brilha. O filhote te olha, apontando para o que caiu do seu bico: uma semente de Ipê, leve como uma asa. Você a trouxe de longe, guardada no canto do bico. O vento da manhã a sopra, em direção a um parque distante. Você entende agora: você não é apenas sobrevivente, você é a mensagem de uma cor que o fogo não pode apagar.",
+  "node7_M_sleep_1": {
+    "text": "Você fecha os olhos exausto, entrando num sono inquieto, e a última coisa que vê não é a floresta que perdeu, mas o reflexo de um mundo que não tem lugar para você. Você sente o pequeno coração do filhote batendo contra o seu. O risco é invisível, o cansaço é absoluto.",
     "bg": "images/CityDawn.jpg",
-    "next": "node8"
+    "next": "node7_M_sleep_2"
   },
-  "node7_M": {
-    "text": "Suas mãos ainda tremem, mas o filhote segura seus dedos com força. Ao abrir a mão que manteve fechada durante a fuga, você descobre uma Castanha-do-Pará que colheu antes do primeiro estalo de fogo. Ela está úmida e pronta. Você a enterra ali mesmo sob o olhar curioso do filhote. O teto verde que você perdeu começará a crescer aqui, por suas mãos. A floresta não é apenas um lugar, ela é o que você protege e carrega consigo.",
+  "node7_M_sleep_2": {
+    "text": "Mas, enquanto a escuridão da cidade parece eterna, uma luz nova começa a tocar o topo dos prédios. Não é o laranja do fogo. É um tom de mel, suave e antigo. Você abre os olhos e o céu não está mais sujo. O som de buzinas desaparece, dando lugar a um silêncio reverente, seguido pelo primeiro canto de um pássaro ao longe.",
     "bg": "images/CityDawn.jpg",
-    "next": "node8"
+    "next": "node8_M_hope_1"
   },
-  "node8": {
+  "node8_O_hope_1": {
+    "text": "Você se levanta. O corpo dói, mas o ar está mais leve. Ao olhar para o lugar onde repousou, percebe que o filhote brinca com algo que se soltou da sua pelagem durante a fuga: uma vagem de Jatobá, intacta e forte.",
+    "bg": "images/Hope.jpg",
+    "music": "musics/VoceChegou.mp3",
+    "volume": 0.6,
+    "next": "node8_O_hope_2"
+  },
+  "node8_O_hope_2": {
+    "text": "Você a carregou entre os pelos enquanto lutava contra o fogo. O filhote a empurra para um pequeno pedaço de terra entre o asfalto. Suas pegadas agora não são de fuga, mas de marcação de um novo território. Enquanto houver quem carregue a semente, a floresta nunca estará morta.",
+    "bg": "images/Hope.jpg",
+    "next": "node9_message_1"
+  },
+  "node8_A_hope_1": {
+    "text": "O sol toca suas penas azuis e você percebe que, apesar da fumaça, sua cor ainda brilha. O filhote te olha, apontando para o que caiu do seu bico: uma semente de Ipê, leve como uma asa.",
+    "bg": "images/Hope.jpg",
+    "music": "musics/VoceChegou.mp3",
+    "volume": 0.6,
+    "next": "node8_A_hope_2"
+  },
+  "node8_A_hope_2": {
+    "text": "Você a trouxe de longe, guardada no canto do bico. O vento da manhã a sopra, em direção a um parque distante. Você entende agora: você não é apenas sobrevivente, você é a mensagem de uma cor que o fogo não pode apagar.",
+    "bg": "images/Hope.jpg",
+    "next": "node9_message_1"
+  },
+  "node8_M_hope_1": {
+    "text": "Suas mãos ainda tremem, mas o filhote segura seus dedos com força. Ao abrir a mão que manteve fechada durante a fuga, você descobre uma Castanha-do-Pará que colheu antes do primeiro estalo de fogo.",
+    "bg": "images/Hope.jpg",
+    "music": "musics/VoceChegou.mp3",
+    "volume": 0.6,
+    "next": "node8_M_hope_2"
+  },
+  "node8_M_hope_2": {
+    "text": "Ela está úmida e pronta. Você a enterra ali mesmo sob o olhar curioso do filhote. O teto verde que você perdeu começará a crescer aqui, por suas mãos. A floresta não é apenas um lugar, ela é o que você protege e carrega consigo.",
+    "bg": "images/Hope.jpg",
+    "next": "node9_message_1"
+  },
+  "node9_message_1": {
     "text": "O desamparo que você sentiu ao guiar esses animais é o mesmo que paralisa o mundo diante das crises ambientais. Mas, assim como eles, você também carrega uma semente, você tem o poder de transformar o futuro. O seu papel é ser o solo onde a esperança cresce. Ao cuidar da saúde da fauna e do equilíbrio da mata, você está prevenindo a próxima emergência e curando a mente de uma geração.",
     "bg": "images/Hope.jpg",
-    "next": "node9"
+    "next": "node9_message_2"
   },
-  "node9": {
+  "node9_message_2": {
     "text": "Todos temos a semente da responsabilidade e a escolha de como a plantar. Bastam apenas algumas gotas de boa vontade para que nossa parte seja feita, por um mundo melhor para todas as espécies, raças, tribos e nações.",
     "bg": "images/Hope.jpg",
     "next": "node10"
