@@ -4,10 +4,15 @@
     "bg": "images/Sky.png",
     "music": "musics/SonsDaAmazôniaIntro.mp3",
     "volume": 0.8,
-    "next": "node2"
+    "next": "node2_1"
   },
-  "node2": {
-    "text": "O ar é úmido e carrega o perfume da terra molhada. Você sente o calor do sol filtrado pelas folhas, iluminando seu rosto. O frescor da brisa te enche de segurança e conforto, você pertence aqui. A natureza não é um cenário, é sua primeira casa, seu lar. Mas essa harmonia é frágil, e você ouve um estalo seco ao longe, e seus sentidos te dizem que o tempo está mudando... Escolha como enfrentar:",
+  "node2_1": {
+    "text": "O ar é úmido e carrega o perfume da terra molhada. Você sente o calor do sol filtrado pelas folhas, iluminando seu rosto. O frescor da brisa te enche de segurança e conforto, você pertence aqui. A natureza não é um cenário, é sua primeira casa, seu lar.",
+    "bg": "images/Forest.jpg",
+    "next": "node2_2"
+  },
+  "node2_2": {
+    "text": "Mas essa harmonia é frágil, e você ouve um estalo seco ao longe, e seus sentidos te dizem que o tempo está mudando... Escolha como enfrentar:",
     "bg": "images/Forest.jpg",
     "choices": [
       {
@@ -15,47 +20,67 @@
         "image": "images/OncaPintada.jpg",
         "description": "Sua presença é imponente e seu corpo é o guardião do chão. Você sente a terra tremer e está pronto para proteger cada palmo deste reino.",
         "tempDialogue": "Onça-Pintada é a sua escolha.",
-        "returnNode": "node3_O"
+        "returnNode": "node3_O_1"
       },
       {
         "text": "Arara-Azul, a visão e a liberdade",
         "image": "images/AraraAzul.jpg",
         "description": "Seu olhar alcança o infinito e suas asas dominam o céu. Você é a voz que alerta e a cor que embeleza a imensidão.",
         "tempDialogue": "Arara-Azul é a sua escolha.",
-        "returnNode": "node3_A"
+        "returnNode": "node3_A_1"
       },
       {
         "text": "Macaco-Aranha, a agilidade e inteligência",
         "image": "images/MacacoAranha.jpg",
         "description": "Sua casa são as árvores e sua força está na união. Você se move onde ninguém mais alcança, sustentando a vida no topo do mundo.",
         "tempDialogue": "Macaco-Aranha é a sua escolha",
-        "returnNode": "node3_M"
+        "returnNode": "node3_M_1"
       }
     ]
   },
-  "node3_O": {
-    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você corre, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+  "node3_O_1": {
+    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar.",
     "bg": "images/BurningForest.jpg",
     "music": "musics/BaianaFogo.mp3",
     "volume": 0.45,
-    "next": "node4_O"
+    "next": "node3_O_2"
   },
-  "node3_A": {
-    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você voa, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+  "node3_O_2": {
+    "text": "Você corre, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_O_1"
+  },
+  "node3_A_1": {
+    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar.",
     "bg": "images/BurningForest.jpg",
     "music": "musics/BaianaFogo.mp3",
     "volume": 0.45,
-    "next": "node4_A"
+    "next": "node3_A_2"
   },
-  "node3_M": {
-    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar. Você salta, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+  "node3_A_2": {
+    "text": "Você voa, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_A_1"
+  },
+  "node3_M_1": {
+    "text": "O ar mudou, quente e seco. O frescor se tornou uma fumaça densa que arranha sua garganta enquanto você tenta respirar.",
     "bg": "images/BurningForest.jpg",
     "music": "musics/BaianaFogo.mp3",
     "volume": 0.45,
-    "next": "node4_M"
+    "next": "node3_M_2"
   },
-  "node4_O": {
-    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem. Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
+  "node3_M_2": {
+    "text": "Você salta, acompanhando o caos em que os animais fogem sem parar, mas algo interrompe seu instinto de fuga. Debaixo de uma raiz exposta/galho baixo, um vulto treme.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_M_1"
+  },
+  "node4_O_1": {
+    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_O_2"
+  },
+  "node4_O_2": {
+    "text": "Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
     "bg": "images/BurningForest.jpg",
     "choices": [
       {
@@ -81,8 +106,13 @@
       }
     ]
   },
-  "node4_A": {
-    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem. Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
+  "node4_A_1": {
+    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_A_2"
+  },
+  "node4_A_2": {
+    "text": "Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
     "bg": "images/BurningForest.jpg",
     "choices": [
       {
@@ -108,8 +138,13 @@
       }
     ]
   },
-  "node4_M": {
-    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem. Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
+  "node4_M_1": {
+    "text": "É um filhote, sozinho, encolhido, tentando se esconder, mas você sabe que não existe um esconderijo daquilo. Os olhos assustados dele te encaram em silêncio, implorando uma resposta que você não tem.",
+    "bg": "images/BurningForest.jpg",
+    "next": "node4_M_2"
+  },
+  "node4_M_2": {
+    "text": "Você assiste o seu lar se transformar em medo, e decide ajudar o pequeno, mas precisa tomar uma decisão...",
     "bg": "images/BurningForest.jpg",
     "choices": [
       {
